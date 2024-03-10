@@ -29,8 +29,7 @@ function list_user_with_read_access {
     collaborators="$(github_api_get "$endpoint")"
 
     #print the list of user with read access 
-    if [ -z "$collaborators"]; 
-    then
+    if [[ -z "$collaborators"]]; then
         echo "No user with read access found in ${REPO_OWNER}/${REPO_NAME}"
     else
         echo "User with read access to ${REPO_OWNER}/{REPO_NMAE}:"
